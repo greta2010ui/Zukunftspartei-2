@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zukunftspartei</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #1e0f3f;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    header {
+      background-color: #2a0d5e;
+      padding: 20px 0;
+    }
+
+    header img {
+      height: 120px;
+    }
+
+    nav {
+      background-color: #2a0d5e;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    h2 {
+      font-family: 'Anton', sans-serif;
+      font-size: 48px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    p, li {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: #9A66C2;
+      font-size: 24px;
+    }
+
+    .accordion {
+      background-color: #2a0d5e;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 20px;
+      transition: 0.4s;
+      margin-bottom: 10px;
+    }
+
+    .active, .accordion:hover {
+      background-color: #3b1a6d;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: #1e0f3f;
+      overflow: hidden;
+    }
+
+    footer {
+      background-color: #2a0d5e;
+      color: white;
+      padding: 20px 0;
+      font-weight: bold;
+      font-size: 18px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .video {
+      margin-top: 40px;
+    }
+
+    .kontakt {
+      margin-top: 60px;
+      background-color: #3b1a6d;
+      padding: 40px 20px;
+      border-radius: 15px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .kontakt input, .kontakt textarea {
+      width: 90%;
+      padding: 15px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .kontakt button {
+      background-color: #9A66C2;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .kontakt button:hover {
+      background-color: #814cb0;
+    }
+
+    .team {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .team-member {
+      background-color: #3b1a6d;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+    }
+
+    .team-member img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .team-member h3 {
+      margin-top: 10px;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://i.postimg.cc/sfNWhP1j/IMG-1560.png" alt="Zukunftspartei Logo">
+</header>
+
+<nav>
+  <a href="#willkommen">Willkommen</a>
+  <a href="#ueberuns">Über uns</a>
+  <a href="#wahlprogramm">Wahlprogramm</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
+
+<div class="video">
+  <h2>Wahlwerbevideo</h2>
+  <iframe src="https://streamable.com/e/7vv8ey" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<section id="willkommen">
+  <h2>Willkommen bei der Zukunftspartei</h2>
+  <p>Unsere Welt verändert sich ständig. Als Partei wollen wir gemeinsam den richtigen Kurs finden und die Zukunft aktiv gestalten.</p>
+  <p>Mit dem Kompass als Symbol zeigen wir, wo's langgeht: zu mehr Gerechtigkeit, Nachhaltigkeit und Zusammenhalt.</p>
+</section>
+
+<section id="ueberuns">
+  <h2>Über uns</h2>
+  <p>Die Zukunftspartei wurde gegründet, um neue Antworten auf die Herausforderungen von morgen zu finden. Unsere Mitglieder vereint der Wille, Politik menschlich, pragmatisch und zukunftsorientiert zu gestalten.</p>
+</section>
+
+<section id="wahlprogramm">
+  <h2>Unser Wahlprogramm</h2>
+
+  <button class="accordion">Rente und Altersvorsorge</button>
+  <div class="panel">
+    <ul>
+      <li>Gesetzliche Rente stärken</li>
+      <li>Einbeziehung von Selbstständigen und Beamten in das Rentensystem</li>
+      <li>Private und betriebliche Vorsorge ausbauen</li>
+      <li>Generationengerechtigkeit fördern</li>
+    </ul>
+  </div>
+
+  <button class="accordion">Bildung</button>
+  <div class="panel">
+    <ul>
+      <li>Einheitliche Grundschule bis Klasse 7</li>
+      <li>Ab Klasse 8 differenzierte Schulformen</li>
+      <li>Förderung individueller Talente im Gymnasium</li>
+      <li>Berufsorientierung an der Realschule</li>
+      <li>Praxisorientierte Ausbildung an der Hauptschule</li>
+      <li>Digitale Bildung stärken</li>
+      <li>Lehrermangel bekämpfen</li>
+    </ul>
+  </div>
+
+  <button class="accordion">Gesundheit & Pflege</button>
+  <div class="panel">
+    <ul>
+      <li>Bekämpfung des Fachkräftemangels und Verbesserung der Arbeitsbedingungen</li>
+      <li>Digitalisierung im Gesundheitswesen</li>
+      <li>Krisenvorbereitung</li>
+      <li>Prävention und Gesundheitsförderung</li>
+    </ul>
+  </div>
+
+  <button class="accordion">Wirtschaft & Arbeit</button>
+  <div class="panel">
+    <ul>
+      <li>Fachkräftemangel gezielt bekämpfen</li>
+      <li>Arbeit attraktiver gestalten</li>
+      <li>Bürokratie abbauen</li>
+      <li>Steuern fair gestalten</li>
+      <li>Branchen stärken</li>
+    </ul>
+  </div>
+
+  <button class="accordion">Migration</button>
+  <div class="panel">
+    <ul>
+      <li>Kostenlose Sprachkurse und Unterstützung bei Jobsuche und Ausbildung</li>
+      <li>Straftaten unabhängig von der Herkunft bestrafen – bei Wiederholung Abschiebung</li>
+      <li>Kein Platz für Rassismus und Diskriminierung</li>
+      <li>Chancengleichheit fördern</li>
+    </ul>
+  </div>
+</section>
+
+<section class="team">
+  <div class="team-member">
+    <img src="https://via.placeholder.com/250x250.png?text=Jamie+Adler" alt="Jamie Adler">
+    <h3>Jamie Adler</h3>
+  </div>
+  <div class="team-member">
+    <img src="https://via.placeholder.com/250x250.png?text=Greta+Buda" alt="Greta Buda">
+    <h3>Greta Buda</h3>
+  </div>
+  <div class="team-member">
+    <img src="https://via.placeholder.com/250x250.png?text=Kseniia+Karabchuk" alt="Kseniia Karabchuk">
+    <h3>Kseniia Karabchuk 
+
+  </div>
+</section>
+
+<section id="kontakt" class="kontakt">
+  <h2>Kontakt</h2>
+  <p>Du hast Fragen oder Anregungen? Kontaktiere uns!</p>
+  <form>
+    <input type="text" placeholder="Dein Name" required><br>
+    <input type="email" placeholder="Deine E-Mail-Adresse" required><br>
+    <textarea rows="5" placeholder="Deine Nachricht" required></textarea><br>
+    <button type="submit">Absenden</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 Zukunftspartei – Wir weisen den Weg.
+</footer>
+
+<script>
+  const acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
